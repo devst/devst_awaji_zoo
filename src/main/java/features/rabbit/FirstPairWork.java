@@ -4,7 +4,7 @@ public class FirstPairWork implements features.FirstPairWork {
 
 	@Override
 	public String getIkigomi() {
-		return "TDDを理解する！";
+		return "understand TDD.";
 	}
 
 	@Override

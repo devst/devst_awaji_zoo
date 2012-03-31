@@ -24,6 +24,6 @@ public class FirstPairWorkTest {
 
 	@Test
 	public void 意気込みが取得できる() throws Exception {
-		assertThat(sut.getIkigomi(), is("TDDを理解する！"));
+		assertThat(sut.getIkigomi(), is("understand TDD."));
 	}
 }
