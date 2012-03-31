@@ -14,6 +14,16 @@ public class FizzBuzzTest {
 		fb = new FizzBuzz();
 	}
 
+	@Test(expected=java.lang.RuntimeException.class)
+	public void testInputNegative() {
+		fb.fizzBuzz(-1);
+	}
+
+	@Test(expected=java.lang.RuntimeException.class)
+	public void testInput0() {
+		fb.fizzBuzz(0);
+	}
+
 	@Test
 	public void testInput1() {
 		assertEquals("1",fb.fizzBuzz(1));
