@@ -53,6 +53,14 @@ public class FizzBuzzTest {
 		this.testFizzBuzz(15, "FizzBuzz");
 	}
 
+	public void test0() {
+		this.testFizzBuzz(0, "0");
+	}
+	@Test(expected=RuntimeException.class)
+	public void test_minus() {
+		new FizzBuzz().fizzBuzz(-1);
+	}
+
 	private void testFizzBuzz(int num, String ans) {
 		FizzBuzz instance = new FizzBuzz();
 		assertEquals(ans, instance.fizzBuzz(num));
