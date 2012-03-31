@@ -5,13 +5,13 @@ public class FirstPairWork implements features.FirstPairWork {
 	@Override
 	public String getIkigomi() {
 		// TODO Auto-generated method stub
-		return "‚ª‚ñ‚Î‚è‚Ü‚·";
+		return "ãŒã‚“ã°ã‚Šã¾ã™ï¼";
 	}
 
 	@Override
 	public String getMembers() {
 		// TODO Auto-generated method stub
-		return "‚Î‚ñ‚Ç‚¤@‚¢‚Æ‚¤";
+		return "ã°ã‚“ã©ã† & ã„ã¨ã†ï¼ï¼";
 	}
 
 }
