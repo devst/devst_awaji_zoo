@@ -9,18 +9,18 @@ public class Myers implements features.Myers {
 			throw new RuntimeException();
 		}
 		if ((arg0 == arg1) && (arg1 == arg2)) {
-			return "正三角形";
+			return "豁｣荳芽ｧ貞ｽ｢";
 		}
 		if (arg0 == arg1) {
-			return "二等辺三角形";
+			return "莠檎ｭ芽ｾｺ荳芽ｧ貞ｽ｢";
 		}
 		if (arg1 == arg2) {
-			return "二等辺三角形";
+			return "莠檎ｭ芽ｾｺ荳芽ｧ貞ｽ｢";
 		}
 		if (arg0 == arg2) {
-			return "二等辺三角形";
+			return "莠檎ｭ芽ｾｺ荳芽ｧ貞ｽ｢";
 		}
-		return "不等辺三角形";
+		return "荳咲ｭ芽ｾｺ荳芽ｧ貞ｽ｢";
 	}
 
 	private boolean isValidTriangle(int arg0, int arg1, int arg2) {
