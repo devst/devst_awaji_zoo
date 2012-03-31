@@ -22,42 +22,42 @@ public class FizzBuzzTest {
 	}
 
 	@Test
-	public void return_Fizz_when_argument_is_three() { //O‚Ì‚ÍFizz‚ğ•Ô‚·
+	public void ä¸‰ã®æ™‚ã¯Fizzã‚’è¿”ã™() {
 		assertThat(sut.fizzBuzz(3), is("Fizz"));
 	}
 	
 	@Test
-	public void  ŒÜ‚Ì‚ÍBuzz‚ğ•Ô‚·() {
+	public void äº”ã®æ™‚ã¯Buzzã‚’è¿”ã™() {
 		assertThat(sut.fizzBuzz(5), is("Buzz"));
 	}
 	
 	@Test
-	public void O‚Ì”{”‚Ì‚ÍFizz‚ğ•Ô‚·() {
+	public void ä¸‰ã®å€æ•°ã®æ™‚ã¯Fizzã‚’è¿”ã™() {
 		assertThat(sut.fizzBuzz(6), is("Fizz"));
 	}
 	
 	@Test
-	public void ŒÜ‚Ì”{”‚Ì‚ÍBuzz‚ğ•Ô‚·() {
+	public void äº”ã®å€æ•°ã®æ™‚ã¯Buzzã‚’è¿”ã™() {
 		assertThat(sut.fizzBuzz(10), is("Buzz"));
 	}
 	
 	@Test
-	public void ˆê‚Ì‚Íˆø”‚Ì”š‚ğ•¶š—ñ‚É‚µ‚Ä•Ô‚·() {
+	public void ä¸€ã®æ™‚ã¯å¼•æ•°ã®æ•°å­—ã‚’æ–‡å­—åˆ—ã«ã—ã¦è¿”ã™() {
 		assertThat(sut.fizzBuzz(1), is("1"));
 	}
 	
 	@Test
-	public void “ñ‚Ì‚Íˆø”‚Ì”š‚ğ•¶š—ñ‚É‚µ‚Ä•Ô‚·() {
+	public void äºŒã®æ™‚ã¯å¼•æ•°ã®æ•°å­—ã‚’æ–‡å­—åˆ—ã«ã—ã¦è¿”ã™() {
 		assertThat(sut.fizzBuzz(2), is("2"));
 	}
 	
 	@Test
-	public void  ‚¶‚ã‚¤‚²‚Ì‚ÍFizzBuzz‚ğ•Ô‚·() {
+	public void åäº”ã®æ™‚ã¯FizzBuzzã‚’è¿”ã™() {
 		assertThat(sut.fizzBuzz(15), is("FizzBuzz"));
 	}
 	
 	@Test
-	public void O‚ÆŒÜ‚ÌŒö”{”‚Ì‚ÍFizzBuzz‚ğ•Ô‚·() {
+	public void ä¸‰ã¨äº”ã®å…¬å€æ•°ã®æ™‚ã¯FizzBuzzã‚’è¿”ã™() {
 		assertThat(sut.fizzBuzz(30), is("FizzBuzz"));
 	}
 	
