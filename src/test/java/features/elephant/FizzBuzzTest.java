@@ -1,6 +1,8 @@
 package features.elephant;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
 import org.junit.Test;
 
@@ -27,6 +29,16 @@ public class FizzBuzzTest {
 	@Test
 	public void fizzBuzzReturnFizzBuzz() {
 		assertEquals("FizzBuzz", fizzBuzz.fizzBuzz(15));
+	}
+
+	@Test(expected = RuntimeException.class)
+	public void fizzBuzzIfInputMinus(){
+		fizzBuzz.fizzBuzz(-1);
+	}
+
+	@Test(expected = RuntimeException.class)
+	public void fizzBuzzIfInputZero(){
+		fizzBuzz.fizzBuzz(0);
 	}
 
 }
