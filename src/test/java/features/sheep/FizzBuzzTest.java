@@ -1,13 +1,13 @@
 package features.sheep;
 
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
-import org.junit.Test;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.Test;
 
 public class FizzBuzzTest {
 
@@ -62,4 +62,21 @@ public class FizzBuzzTest {
 		
 //		fail("not yet implemented");
 	}
+
+	@Test(expected=RuntimeException.class)
+	public void test4() {
+		FizzBuzz a = new FizzBuzz();
+		String fizzBuzz = a.fizzBuzz(0);
+		
+//		fail("not yet implemented");
+	}
+
+	@Test(expected=RuntimeException.class)
+	public void test5() {
+		FizzBuzz a = new FizzBuzz();
+		String fizzBuzz = a.fizzBuzz(-1);
+		
+//		fail("not yet implemented");
+	}
+
 }
