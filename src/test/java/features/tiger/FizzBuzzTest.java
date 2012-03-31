@@ -22,7 +22,7 @@ public class FizzBuzzTest {
 	}
 
 	@Test
-	public void ŽO‚ÌŽž‚ÍFizz‚ð•Ô‚·() {
+	public void return_Fizz_when_argument_is_three() { //ŽO‚ÌŽž‚ÍFizz‚ð•Ô‚·
 		assertThat(sut.fizzBuzz(3), is("Fizz"));
 	}
 	
