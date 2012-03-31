@@ -10,31 +10,31 @@ public class MyersTest {
 	public void testRegularTriangle() {
 		Myers instance = new Myers();
 		String ret = instance.getName(5, 5, 5);
-		assertEquals("正三角形", ret);
+		assertEquals("豁｣荳芽ｧ貞ｽ｢", ret);
 	}
 	@Test
 	public void testIsoscelesTriangle1() {
 		Myers instance = new Myers();
 		String ret = instance.getName(5, 5, 6);
-		assertEquals("二等辺三角形", ret);
+		assertEquals("莠檎ｭ芽ｾｺ荳芽ｧ貞ｽ｢", ret);
 	}
 	@Test
 	public void testIsoscelesTriangle2() {
 		Myers instance = new Myers();
 		String ret = instance.getName(6, 5, 5);
-		assertEquals("二等辺三角形", ret);
+		assertEquals("莠檎ｭ芽ｾｺ荳芽ｧ貞ｽ｢", ret);
 	}
 	@Test
 	public void testIsoscelesTriangle3() {
 		Myers instance = new Myers();
 		String ret = instance.getName(5, 6, 5);
-		assertEquals("二等辺三角形", ret);
+		assertEquals("莠檎ｭ芽ｾｺ荳芽ｧ貞ｽ｢", ret);
 	}
 	@Test
 	public void testTriangle() {
 		Myers instance = new Myers();
 		String ret = instance.getName(4, 5, 6);
-		assertEquals("不等辺三角形", ret);
+		assertEquals("荳咲ｭ芽ｾｺ荳芽ｧ貞ｽ｢", ret);
 	}
 	@Test(expected = RuntimeException.class)
 	public void testInvalidTriangle1() {
