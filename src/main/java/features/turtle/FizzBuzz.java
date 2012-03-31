@@ -1,4 +1,4 @@
-package src.main.java.features.turtle;
+package features.turtle;
 
 public class FizzBuzz implements features.FizzBuzz {
 

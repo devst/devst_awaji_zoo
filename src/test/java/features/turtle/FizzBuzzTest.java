@@ -1,9 +1,9 @@
-package src.test.java.features.turtle;
+package features.turtle;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
-import src.main.java.features.turtle.FizzBuzz;
+
 
 public class FizzBuzzTest {
 	@Test
