@@ -6,13 +6,13 @@ import org.junit.Test;
 
 public class FirstPairWorkTest {
 	@Test
-	public void ˆÓ‹C‚İ() {
+	public void æ„æ°—è¾¼ã¿() {
 		FirstPairWork fpw = new FirstPairWork();
 		assertEquals("Just do it.", fpw.getIkigomi());
 	}
 
 	@Test
-	public void –¼‘O() {
+	public void åå‰() {
 		FirstPairWork fpw = new FirstPairWork();
 		assertEquals("cozykaz and urimaro", fpw.getMembers());
 	}
