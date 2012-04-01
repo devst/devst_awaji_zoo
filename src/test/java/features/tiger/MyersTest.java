@@ -21,57 +21,57 @@ public class MyersTest {
 	}
 
 	@Test
-	public void ‘S‚Ä‚Ì•Ó‚ª“¯‚¶‚È‚ç‚Î³OŠpŒ`() {
-		assertThat(sut.getName(5, 5, 5), is("³OŠpŒ`"));
+	public void å…¨ã¦ã®è¾ºãŒåŒã˜ãªã‚‰ã°æ­£ä¸‰è§’å½¢() {
+		assertThat(sut.getName(5, 5, 5), is("æ­£ä¸‰è§’å½¢"));
 	}
 	
 	@Test
-	public void —¼ƒTƒCƒh‚Ì•Ó‚Ì’·‚³‚ª“¯‚¶‚È‚ç‚Î“ñ“™•ÓOŠpŒ`() {
-		assertThat(sut.getName(5, 5, 6), is("“ñ“™•ÓOŠpŒ`"));
+	public void ä¸¡ã‚µã‚¤ãƒ‰ã®è¾ºã®é•·ã•ãŒåŒã˜ãªã‚‰ã°äºŒç­‰è¾ºä¸‰è§’å½¢() {
+		assertThat(sut.getName(5, 5, 6), is("äºŒç­‰è¾ºä¸‰è§’å½¢"));
 	}
 	
 	@Test
-	public void ‘S‚Ä‚Ì•Ó‚Ì’·‚³‚ªˆÙ‚È‚ê‚Î•s“™•ÓOŠpŒ`() {
-		assertThat(sut.getName(5, 4, 3), is("•s“™•ÓOŠpŒ`"));
+	public void å…¨ã¦ã®è¾ºã®é•·ã•ãŒç•°ãªã‚Œã°ä¸ç­‰è¾ºä¸‰è§’å½¢() {
+		assertThat(sut.getName(5, 4, 3), is("ä¸ç­‰è¾ºä¸‰è§’å½¢"));
 	}
 	
 	@Test
-	public void ‰E‘¤‚Ì•Ó‚Æ’ê•Ó‚ª“¯‚¶‚È‚ç‚Î“ñ“™•ÓOŠpŒ`() {
-		assertThat(sut.getName(5, 6, 6), is("“ñ“™•ÓOŠpŒ`"));
+	public void å³å´ã®è¾ºã¨åº•è¾ºãŒåŒã˜ãªã‚‰ã°äºŒç­‰è¾ºä¸‰è§’å½¢() {
+		assertThat(sut.getName(5, 6, 6), is("äºŒç­‰è¾ºä¸‰è§’å½¢"));
 	}
 	
 	@Test
-	public void ¶‘¤‚Ì•Ó‚Æ’ê•Ó‚ª“¯‚¶‚È‚ç‚Î“ñ“™•ÓOŠpŒ`() {
-		assertThat(sut.getName(6, 5, 6), is("“ñ“™•ÓOŠpŒ`"));
+	public void å·¦å´ã®è¾ºã¨åº•è¾ºãŒåŒã˜ãªã‚‰ã°äºŒç­‰è¾ºä¸‰è§’å½¢() {
+		assertThat(sut.getName(6, 5, 6), is("äºŒç­‰è¾ºä¸‰è§’å½¢"));
 	}
 	
 	@Test(expected=RuntimeException.class)
-	public void ƒTƒCƒh‚Ì•Ó‚Ì˜a‚ª’ê•Ó‚æ‚è’Z‚¯‚ê‚Î—áŠO() throws Exception {
+	public void ã‚µã‚¤ãƒ‰ã®è¾ºã®å’ŒãŒåº•è¾ºã‚ˆã‚ŠçŸ­ã‘ã‚Œã°ä¾‹å¤–() throws Exception {
 		sut.getName(1, 2, 5);
 	}
 
 	@Test(expected=RuntimeException.class)
-	public void ‰E‘¤‚Ì•Ó‚Æ’ê•Ó‚Ì˜a‚ª¶‘¤‚Ì•Ó‚æ‚è’Z‚¯‚ê‚Î—áŠO() throws Exception {
+	public void å³å´ã®è¾ºã¨åº•è¾ºã®å’ŒãŒå·¦å´ã®è¾ºã‚ˆã‚ŠçŸ­ã‘ã‚Œã°ä¾‹å¤–() throws Exception {
 		sut.getName(1, 5, 2);
 	}
 	
 	@Test(expected=RuntimeException.class)
-	public void ¶‘¤‚Ì•Ó‚Æ’ê•Ó‚Ì˜a‚ª‰E‘¤‚Ì•Ó‚æ‚è’Z‚¯‚ê‚Î—áŠO() throws Exception {
+	public void å·¦å´ã®è¾ºã¨åº•è¾ºã®å’ŒãŒå³å´ã®è¾ºã‚ˆã‚ŠçŸ­ã‘ã‚Œã°ä¾‹å¤–() throws Exception {
 		sut.getName(5, 1, 2);
 	}
 	
 	@Test(expected=RuntimeException.class)
-	public void ƒTƒCƒh‚Ì•Ó‚Ì˜a‚ª’ê•Ó‚Æ“¯‚¶‚È‚ç‚Î—áŠO() throws Exception {
+	public void ã‚µã‚¤ãƒ‰ã®è¾ºã®å’ŒãŒåº•è¾ºã¨åŒã˜ãªã‚‰ã°ä¾‹å¤–() throws Exception {
 		sut.getName(1, 2, 3);
 	}
 	
 	@Test(expected=RuntimeException.class)
-	public void ‰E‘¤‚Ì•Ó‚Æ’ê•Ó‚Ì˜a‚ª¶‘¤‚Ì•Ó‚Æ“¯‚¶‚È‚ç‚Î—áŠO() throws Exception {
+	public void å³å´ã®è¾ºã¨åº•è¾ºã®å’ŒãŒå·¦å´ã®è¾ºã¨åŒã˜ãªã‚‰ã°ä¾‹å¤–() throws Exception {
 		sut.getName(1, 3, 2);
 	}
 	
 	@Test(expected=RuntimeException.class)
-	public void ¶‘¤‚Ì•Ó‚Æ’ê•Ó‚Ì˜a‚ª‰E‘¤‚Ì•Ó‚Æ“¯‚¶‚È‚ç‚Î—áŠO() throws Exception {
+	public void å·¦å´ã®è¾ºã¨åº•è¾ºã®å’ŒãŒå³å´ã®è¾ºã¨åŒã˜ãªã‚‰ã°ä¾‹å¤–() throws Exception {
 		sut.getName(3, 1, 2);
 	}
 
