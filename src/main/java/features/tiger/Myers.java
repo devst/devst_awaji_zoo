@@ -9,14 +9,14 @@ public class Myers implements features.Myers {
 		}
 		
 		if(this.isEquilateralTriangle(sideA, sideB, base)) {
-			return "正三角形";
+			return "豁｣荳芽ｧ貞ｽ｢";
 		}
 		
 		if(this.isIsosceles(sideA, sideB, base)) {
-			return "二等辺三角形";
+			return "莠檎ｭ芽ｾｺ荳芽ｧ貞ｽ｢";
 		}
 		
-	return "不等辺三角形";
+	return "荳咲ｭ芽ｾｺ荳芽ｧ貞ｽ｢";
 	}
 	
 	private boolean isEquilateralTriangle(int sideA, int sideB, int base) {
