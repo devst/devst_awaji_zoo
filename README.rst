@@ -5,7 +5,7 @@ DEVST_AWAJI_ANIMALS
 
 リモート追加
 ------------
-git remote add monkey   git://github.com/devst/devst_awaji_monkey  
+git remote add monkey   git://github.com/devst/devst_awaji_src  
 git remote add turtle   git://github.com/devst/devst_awaji_turtle  
 git remote add rabbit   git://github.com/devst/devst_awaji_rabbit  
 git remote add giraffe  git://github.com/devst/devst_awaji_giraffe 
@@ -20,4 +20,8 @@ git remote add snake    git://github.com/devst/devst_awaji_snake
 git remote add horse    git://github.com/devst/devst_awaji_horse
 git remote add bird     git://github.com/devst/devst_awaji_bird
 git remote add wildboar git://github.com/devst/devst_awaji_wildboar
+
+全部fetch
+---------
+git fetch --all
 
