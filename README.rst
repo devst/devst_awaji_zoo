@@ -25,3 +25,12 @@ git remote add wildboar git://github.com/devst/devst_awaji_wildboar
 ---------
 git fetch --all
 
+merge
+-----
+git merge xxxx/master
+
+git checkout --ours .gitignore
+git checkout --ours README.rst
+git checkout --ours pom.xml
+mvn test
+
