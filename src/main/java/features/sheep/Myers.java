@@ -13,12 +13,12 @@ public class Myers implements features.Myers {
 
     @Override
     public String getName(int i, int i1, int i2) {
-        if ((i == i1) && (i1 == i2)){
+        if (i <= 1 || i1 <= 1 || i2 <= 1){
+            throw new IllegalArgumentException();
+        } else if ((i == i1) && (i1 == i2)){
             return "正三角形";
         }else if ((i == i1) || (i1 == i2) || (i == i2)){
             return "二等辺三角形";
-        } else if (i <= 0 || i1 <= 0 || i2 <= 0){
-            throw new IllegalArgumentException();
         } else {
             return "不等辺三角形";
         }
