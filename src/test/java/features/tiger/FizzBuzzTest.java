@@ -61,4 +61,14 @@ public class FizzBuzzTest {
 		assertThat(sut.fizzBuzz(30), is("FizzBuzz"));
 	}
 	
+	@Test(expected=RuntimeException.class)
+	public void ゼロの時は例外をスローする() throws Exception {
+			sut.fizzBuzz(0);
+	}
+	
+	@Test(expected=RuntimeException.class)
+	public void マイナスの時は例外をスローする() throws Exception {
+			sut.fizzBuzz(-1);
+	}
+	
 }

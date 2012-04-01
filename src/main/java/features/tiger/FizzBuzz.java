@@ -4,6 +4,9 @@ public class FizzBuzz implements features.FizzBuzz {
 
 	@Override
 	public String fizzBuzz(int number) {
+		if (number <= 0) {
+			throw new RuntimeException();
+		}
 		if (number % 15 == 0) {
 			return "FizzBuzz";
 		}
