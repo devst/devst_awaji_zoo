@@ -12,6 +12,8 @@ import features.bird.FizzBuzz;
 
 public class FizzBuzzTest {
 
+	private FizzBuzz instance;
+
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 	}
@@ -22,6 +24,7 @@ public class FizzBuzzTest {
 
 	@Before
 	public void setUp() throws Exception {
+		instance = new FizzBuzz();
 	}
 
 	@After
@@ -30,39 +33,37 @@ public class FizzBuzzTest {
 
 	@Test
 	public void test1() {
-		this.testFizzBuzz(1, "1");
+		assertEquals(this.instance.fizzBuzz(1), "1");
 	}
 	@Test
 	public void test2() {
-		this.testFizzBuzz(2, "2");
+		assertEquals(this.instance.fizzBuzz(2), "2");
 	}
 	@Test
 	public void test3() {
-		this.testFizzBuzz(3, "Fizz");
+		assertEquals(this.instance.fizzBuzz(3), "Fizz");
 	}
 	@Test
 	public void test5() {
-		this.testFizzBuzz(5, "Buzz");
+		assertEquals(this.instance.fizzBuzz(5), "Buzz");
 	}
 	@Test
 	public void test6() {
-		this.testFizzBuzz(6, "Fizz");
+		assertEquals(this.instance.fizzBuzz(6), "Fizz");
 	}
 	@Test
 	public void test15() {
-		this.testFizzBuzz(15, "FizzBuzz");
+		assertEquals(this.instance.fizzBuzz(15), "FizzBuzz");
 	}
 
+	@Test(expected=RuntimeException.class)
 	public void test0() {
-		this.testFizzBuzz(0, "0");
+		this.instance.fizzBuzz(0);
 	}
+
 	@Test(expected=RuntimeException.class)
 	public void test_minus() {
-		new FizzBuzz().fizzBuzz(-1);
+		this.instance.fizzBuzz(-1);
 	}
 
-	private void testFizzBuzz(int num, String ans) {
-		FizzBuzz instance = new FizzBuzz();
-		assertEquals(ans, instance.fizzBuzz(num));
- 	}
 }
