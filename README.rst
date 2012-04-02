@@ -29,8 +29,8 @@ DEVST_AWAJI_ANIMALS
 
   git fetch --all
 
-merge
------
+一つずつマージしてテスト
+------------------------
 ::
 
   git merge xxxx/master
@@ -38,5 +38,14 @@ merge
   git checkout --ours .gitignore
   git checkout --ours README.rst
   git checkout --ours pom.xml
+  mvn test
+
+
+以降の変更はまとめて
+--------------------
+::
+  
+  git fetch --all
+  git merge xxxx/master yyyy/master ...
   mvn test
 
