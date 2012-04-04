@@ -31,13 +31,16 @@ public class Calculator implements features.Calculator {
         	throw new IllegalArgumentException("0を含む式が指定されました");
         }
         
-        BigDecimal result;
+        return RESULT_FORMAT.format(calculate(op, leftNum, rightNum));
+    }
+
+	private BigDecimal calculate(String op, BigDecimal leftNum, BigDecimal rightNum) {
+		BigDecimal result;
         if("+".equals(op)) result = leftNum.add(rightNum);
         else if("-".equals(op)) result = leftNum.subtract(rightNum);
         else if("*".equals(op)) result = leftNum.multiply(rightNum);
         else if("/".equals(op)) result = leftNum.divide(rightNum, 3, BigDecimal.ROUND_HALF_UP);
         else throw new IllegalArgumentException("無効な演算子が指定されました");
-        
-        return RESULT_FORMAT.format(result);
-    }
+		return result;
+	}
 }
