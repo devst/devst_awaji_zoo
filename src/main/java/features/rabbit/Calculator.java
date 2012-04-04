@@ -17,7 +17,8 @@ public class Calculator implements features.Calculator {
         BigDecimal rightNum = new BigDecimal(right);
         BigDecimal result;
         if("+".equals(op)) result = leftNum.add(rightNum);
-        else result = leftNum.subtract(rightNum);
+        else if("-".equals(op)) result = leftNum.subtract(rightNum);
+        else result = leftNum.multiply(rightNum);
         return RESULT_FORMAT.format(result);
     }
 }

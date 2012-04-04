@@ -28,4 +28,10 @@ public class CalculatorTest {
 
         assertThat(sut.executeCalc("-", "5", "3"),is("2"));
     }
+    
+    @Test
+    public void multiplyと2つの10進数値をexecuteCalculateに渡すと2つの数値の乗算結果の文字列が返る() {
+
+        assertThat(sut.executeCalc("*", "5", "3"),is("15"));
+    }
 }
