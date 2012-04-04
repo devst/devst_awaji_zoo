@@ -79,4 +79,16 @@ public class CalculatorTest {
 
         sut.execute("3+");
     }
+    
+    @Test(expected=RuntimeException.class)
+    public void 右辺の数値が0を四則演算式がexecuteに渡されるとRuntimeException() {
+
+        sut.execute("1+0");
+    }
+    
+    @Test(expected=RuntimeException.class)
+    public void 左辺の数値が0を四則演算式がexecuteに渡されるとRuntimeException() {
+
+        sut.execute("0+1");
+    }
 }
