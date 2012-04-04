@@ -55,4 +55,28 @@ public class CalculatorTest {
     	assertThat(sut.execute("5*3"),is("15"));
         assertThat(sut.execute("5/3"),is("1.667"));
     }
+    
+    @Test(expected=RuntimeException.class)
+    public void 数値の間に複数個演算子のある式がexecuteに渡されるとRuntimeException() {
+
+        sut.execute("5++3");
+    }
+    
+    @Test(expected=RuntimeException.class)
+    public void 演算子の右辺にしか数値のない式がexecuteに渡されるとRuntimeException() {
+
+        sut.execute("-3");
+    }
+    
+    @Test(expected=RuntimeException.class)
+    public void 演算子の左辺にしか数値のない式がexecuteに渡されるとRuntimeException() {
+
+        sut.execute("3+");
+    }
+    
+    @Test(expected=RuntimeException.class)
+    public void 無効な演算子を含む式がexecuteに渡されるとRuntimeException() {
+
+        sut.execute("3+");
+    }
 }
