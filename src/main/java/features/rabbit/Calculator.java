@@ -19,7 +19,8 @@ public class Calculator implements features.Calculator {
         if("+".equals(op)) result = leftNum.add(rightNum);
         else if("-".equals(op)) result = leftNum.subtract(rightNum);
         else if("*".equals(op)) result = leftNum.multiply(rightNum);
-        else result = leftNum.divide(rightNum, 3, BigDecimal.ROUND_HALF_UP);
+        else if("/".equals(op)) result = leftNum.divide(rightNum, 3, BigDecimal.ROUND_HALF_UP);
+        else throw new IllegalArgumentException("無効な演算子が指定されました");
         return RESULT_FORMAT.format(result);
     }
 }

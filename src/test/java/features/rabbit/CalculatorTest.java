@@ -40,4 +40,10 @@ public class CalculatorTest {
 
         assertThat(sut.executeCalc("/", "5", "3"),is("1.667"));
     }
+    
+    @Test(expected=RuntimeException.class)
+    public void 無効な演算子の空文字列の場合はIllegalArgumentException() {
+
+        sut.executeCalc("?", "5", "3");
+    }
 }
