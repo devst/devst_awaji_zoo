@@ -36,6 +36,11 @@ public class TsurukamezanTest {
 	}
 	
 	@Test
+	public void 鶴も亀も0のとき() {
+		assertThat(sut.tsurukame(0,0), is("鶴0羽、亀0匹"));
+	}
+	
+	@Test
 	public void 亀が１匹のみのとき() {
 		assertThat(sut.tsurukame(1,4), is("鶴0羽、亀1匹"));
 	}
@@ -51,12 +56,12 @@ public class TsurukamezanTest {
 	}
 	
 	@Test(expected=RuntimeException.class)
-	public void 個体数が0以下なら実行時例外() {
-		sut.tsurukame(0,2);
+	public void 個体数が0未満なら実行時例外() {
+		sut.tsurukame(-1,2);
 	}
 	
 	@Test(expected=RuntimeException.class)
-	public void 足の数が0以下なら実行時例外() {
-		sut.tsurukame(1,0);
+	public void 足の数が0未満なら実行時例外() {
+		sut.tsurukame(1,-2);
 	}
 }
