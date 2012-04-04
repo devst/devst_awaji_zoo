@@ -2,14 +2,23 @@ package features.rabbit;
 
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Calculator implements features.Calculator {
+
+	private static final Pattern PATTERN = Pattern.compile("^([0-9]+)(\\+|\\-|\\*|\\/)([0-9]+)$");
 
     private static final DecimalFormat RESULT_FORMAT = new DecimalFormat("#.###");
 
     @Override
-    public String execute(String s) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+    public String execute(String term) {
+        Matcher m = PATTERN.matcher(term);
+        m.matches();
+        String op = m.group(2);
+        String left = m.group(1);
+        String right = m.group(3);
+        return executeCalc(op, left, right);
     }
 
     public String executeCalc(String op ,String left, String right) {

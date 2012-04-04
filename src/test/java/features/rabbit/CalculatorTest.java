@@ -46,4 +46,13 @@ public class CalculatorTest {
 
         sut.executeCalc("?", "5", "3");
     }
+    
+    @Test
+    public void 四則演算式の文字列をexecuteに渡すと演算結果が返る() {
+
+    	assertThat(sut.execute("5+3"),is("8"));
+    	assertThat(sut.execute("5-3"),is("2"));
+    	assertThat(sut.execute("5*3"),is("15"));
+        assertThat(sut.execute("5/3"),is("1.667"));
+    }
 }
