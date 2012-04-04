@@ -15,6 +15,9 @@ public class Calculator implements features.Calculator {
     public String executeCalc(String op ,String left, String right) {
         BigDecimal leftNum = new BigDecimal(left);
         BigDecimal rightNum = new BigDecimal(right);
-        return RESULT_FORMAT.format(leftNum.add(rightNum));
+        BigDecimal result;
+        if("+".equals(op)) result = leftNum.add(rightNum);
+        else result = leftNum.subtract(rightNum);
+        return RESULT_FORMAT.format(result);
     }
 }
