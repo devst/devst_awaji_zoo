@@ -34,4 +34,10 @@ public class CalculatorTest {
 
         assertThat(sut.executeCalc("*", "5", "3"),is("15"));
     }
+    
+    @Test
+    public void divideと2つの10進数値をexecuteCalculateに渡すと2つの数値の除算結果の文字列が返る() {
+
+        assertThat(sut.executeCalc("/", "5", "3"),is("1.667"));
+    }
 }
