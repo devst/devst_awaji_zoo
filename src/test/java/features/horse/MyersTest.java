@@ -41,18 +41,18 @@ public class MyersTest {
 	}
 	
 	@Test
-	public void 三角形() {
-		myAssert("三角形", 1, 4, 2);
+	public void 不等辺三角形() {
+		myAssert("不等辺三角形", 1, 4, 2);
 	}
 	
 	@Test
-	public void 三角形_2() {
-		myAssert("三角形", 4, 1, 2);
+	public void 不等辺三角形_2() {
+		myAssert("不等辺三角形", 4, 1, 2);
 	}
 	
 	@Test
-	public void 三角形_3() {
-		myAssert("三角形", 1, 2, 4);
+	public void 不等辺三角形_3() {
+		myAssert("不等辺三角形", 1, 2, 4);
 	}
 	
 	@Test(expected=RuntimeException.class)

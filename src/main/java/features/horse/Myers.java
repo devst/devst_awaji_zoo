@@ -15,7 +15,7 @@ public class Myers implements features.Myers {
 			return "二等辺三角形";
 		}
 		else if( (a + b < c) || (a + c < b) || (b + c < a) ){
-			return "三角形";
+			return "不等辺三角形";
 		}
 		
 		throw new RuntimeException("すべての条件に合致しない");
