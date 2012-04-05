@@ -27,32 +27,32 @@ public class MyersTest {
 	
 	@Test
 	public void 二等辺三角形() {
-		myAssert("二等辺三角形", 1, 1, 2);
+		myAssert("二等辺三角形", 2, 2, 1);
 	}
 	
 	@Test
 	public void 二等辺三角形_2() {
-		myAssert("二等辺三角形", 1, 2, 1);
+		myAssert("二等辺三角形", 2, 1, 2);
 	}
 
 	@Test
 	public void 二等辺三角形_3() {
-		myAssert("二等辺三角形", 2, 1, 1);
+		myAssert("二等辺三角形", 2, 2, 1);
 	}
 	
 	@Test
 	public void 不等辺三角形() {
-		myAssert("不等辺三角形", 1, 4, 2);
+		myAssert("不等辺三角形", 2, 3, 4);
 	}
 	
 	@Test
 	public void 不等辺三角形_2() {
-		myAssert("不等辺三角形", 4, 1, 2);
+		myAssert("不等辺三角形", 4, 2, 3);
 	}
 	
 	@Test
 	public void 不等辺三角形_3() {
-		myAssert("不等辺三角形", 1, 2, 4);
+		myAssert("不等辺三角形", 3, 4, 2);
 	}
 	
 	@Test(expected=RuntimeException.class)
@@ -67,8 +67,9 @@ public class MyersTest {
 	
 	@Test(expected=RuntimeException.class)
 	public void 一辺が他二辺の和_3() {
-		myAssert("三角形", 1, 2, 3);
+		myAssert("三角形", 3, 2, 1);
 	}
+	
 	
 	@Test(expected=RuntimeException.class)
 	public void 入力値不正() {
