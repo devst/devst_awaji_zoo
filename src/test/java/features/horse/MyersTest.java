@@ -27,17 +27,17 @@ public class MyersTest {
 	
 	@Test
 	public void 二等辺三角形() {
-		myAssert("二等辺三角形", 1, 1, 2);
+		myAssert("二等辺三角形", 2, 2, 1);
 	}
 	
 	@Test
 	public void 二等辺三角形_2() {
-		myAssert("二等辺三角形", 1, 2, 1);
+		myAssert("二等辺三角形", 2, 1, 2);
 	}
 
 	@Test
 	public void 二等辺三角形_3() {
-		myAssert("二等辺三角形", 2, 1, 1);
+		myAssert("二等辺三角形", 2, 2, 1);
 	}
 	
 	@Test
