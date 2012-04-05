@@ -63,5 +63,10 @@ public class FizzBuzzTest {
 		run(0);
 	}
 	
+	@Test(expected=RuntimeException.class)
+	public void test8(){
+		run(-1);
+	}
+	
 	
 }

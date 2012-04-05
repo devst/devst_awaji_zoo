@@ -4,7 +4,7 @@ public class FizzBuzz implements features.FizzBuzz {
 
 	@Override
 	public String fizzBuzz(int arg0) {
-		if( arg0  == 0){
+		if( arg0  <= 0){
 			throw new RuntimeException();
 		}
 		
