@@ -4,6 +4,7 @@ public class Calculator implements features.Calculator {
 	// 仕様メモ
 	// * 二項演算だけ許容
 	// * 式の最後に=はつかない
+	// * 小数は許容しない？？？
 	enum Operator{
 		ADD,
 		SUB,
@@ -11,15 +12,15 @@ public class Calculator implements features.Calculator {
 		DIV,
 	}
 
-	private Double[] getNumbers( String calculation ){
+	private Integer[] getNumbers( String calculation ){
 		String[] params = calculation.split("(\\+|-|\\*|\\/)");
 		if( params.length != 2 ){
 			throw new IllegalArgumentException();
 		}
 		
-		Double[] result = new Double[2];
+		Integer[] result = new Integer[2];
 		for( int i = 0; i < params.length; i++ ){
-			result[i] = Double.valueOf(params[i]);
+			result[i] = Integer.valueOf(params[i]);
 		}
 		
 		return result;
@@ -47,7 +48,7 @@ public class Calculator implements features.Calculator {
 	
 	@Override
 	public String execute(String arg0) {
-		Double[] params = getNumbers( arg0 );
+		Integer[] params = getNumbers( arg0 );
 		switch( getOperator(arg0) ){
 		case ADD:
 			return String.valueOf(params[0] + params[1]);
@@ -59,7 +60,7 @@ public class Calculator implements features.Calculator {
 			if( params[1] == 0 ){
 				throw new IllegalArgumentException("0割");
 			}
-			return String.valueOf(params[0] / params[1]);
+			return String.valueOf((double)(params[0]) / params[1]);
 		default:
 			throw new IllegalArgumentException();
 		}
