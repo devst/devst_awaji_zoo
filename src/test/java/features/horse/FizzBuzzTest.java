@@ -1,4 +1,4 @@
-package features.house;
+package features.horse;
 
 import static org.junit.Assert.*;
 
@@ -56,9 +56,17 @@ public class FizzBuzzTest {
 	@Test
 	public void test6(){
 		assertEquals("FizzBuzz", run(65535) );
-		assertEquals("FizzBuzz", run(0) );
 	}
 	
+	@Test(expected=RuntimeException.class)
+	public void test7(){
+		run(0);
+	}
+	
+	@Test(expected=RuntimeException.class)
+	public void test8(){
+		run(-1);
+	}
 	
 	
 }
