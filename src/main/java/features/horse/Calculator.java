@@ -50,7 +50,7 @@ public class Calculator implements features.Calculator {
 		Double[] params = getNumbers( arg0 );
 		switch( getOperator(arg0) ){
 		case ADD:
-			return String.valueOf(params[0] + params[1]);
+			return String.valueOf(params[0] + params[1]).replace("\\..*", "");
 		case SUB:
 			return String.valueOf(params[0] - params[1]);
 		case MULTI:
