@@ -14,7 +14,7 @@ public class Calculator implements features.Calculator {
 	private Double[] getNumbers( String calculation ){
 		String[] params = calculation.split("(\\+|-|\\*|\\/)");
 		if( params.length != 2 ){
-			throw new RuntimeException();
+			throw new IllegalArgumentException();
 		}
 		
 		Double[] result = new Double[2];
@@ -41,7 +41,7 @@ public class Calculator implements features.Calculator {
 			return Operator.DIV;
 		}
 		else{
-			throw new RuntimeException();
+			throw new IllegalArgumentException();
 		}
 	}
 	
@@ -57,11 +57,11 @@ public class Calculator implements features.Calculator {
 			return String.valueOf(params[0] * params[1]);
 		case DIV:
 			if( params[1] == 0 ){
-				throw new RuntimeException("0割");
+				throw new IllegalArgumentException("0割");
 			}
 			return String.valueOf(params[0] / params[1]);
 		default:
-			throw new RuntimeException();
+			throw new IllegalArgumentException();
 		}
 	}
 
