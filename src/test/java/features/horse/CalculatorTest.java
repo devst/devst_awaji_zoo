@@ -22,27 +22,27 @@ public class CalculatorTest {
 
 	@Test
 	public void 和() {
-		run( "1+1", "2" );
+		run( "1+1", "2.0" );
 	}
 
 	@Test
 	public void 差() {
-		run( "1-1", "0" );
+		run( "1-1", "0.0" );
 	}
 	
 	@Test
 	public void 積() {
-		run( "1*1", "1" );
+		run( "1*1", "1.0" );
 	}
 	
 	@Test
 	public void 積_2() {
-		run( "3*2", "6" );
+		run( "3*2", "6.0" );
 	}
 	
 	@Test
 	public void 商() {
-		run( "4/2", "2" );
+		run( "4/2", "2.0" );
 	}
 	
 	@Test
