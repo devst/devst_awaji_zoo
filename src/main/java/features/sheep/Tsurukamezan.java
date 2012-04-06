@@ -11,7 +11,7 @@ package features.sheep;
 public class Tsurukamezan implements features.Tsurukamezan{
 
     public String tsurukame(int i, int i1) {
-        if (i==0 || i1==0){
+        if (i<=0 || i1<=0){
             throw new IllegalArgumentException();
         }
         int kame = (i1 - (2*i)) /2;
