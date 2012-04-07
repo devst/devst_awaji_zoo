@@ -23,6 +23,7 @@ public class CalclaterTest {
 		assertEquals("4", tester.execute("12/3"));
 		assertEquals("0.5", tester.execute("1/2"));
 		assertEquals("0.333", tester.execute("1/3"));
+		assertEquals("0.001", tester.execute("1/2000"));
 	}
 	
 	@Test

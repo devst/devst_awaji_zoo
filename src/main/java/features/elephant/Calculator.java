@@ -1,5 +1,6 @@
 package features.elephant;
 
+import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.text.DecimalFormat;
 
@@ -29,7 +30,9 @@ public class Calculator implements features.Calculator {
 			return num1.multiply(num2).toString();
 		}else if(items[1].equals("/")){
 			DecimalFormat fmt = new DecimalFormat("0.###");
-			return fmt.format((num1.doubleValue() / num2.doubleValue()));
+			BigDecimal num1a = new BigDecimal(items[0]);
+			BigDecimal num2a = new BigDecimal(items[2]);
+			return fmt.format(num1a.divide(num2a, 3, BigDecimal.ROUND_HALF_UP).doubleValue());
 		}else{
 			throw new IllegalArgumentException(formula);
 		}
