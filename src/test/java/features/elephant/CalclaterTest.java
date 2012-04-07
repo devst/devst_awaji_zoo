@@ -21,8 +21,8 @@ public class CalclaterTest {
 	@Test
 	public void 割り算(){
 		assertEquals("4", tester.execute("12/3"));
-		assertEquals("1", tester.execute("1/2"));
-		assertEquals("5", tester.execute("14/3"));
+		assertEquals("0.5", tester.execute("1/2"));
+		assertEquals("0.333", tester.execute("1/3"));
 	}
 	
 	@Test

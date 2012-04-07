@@ -1,7 +1,7 @@
 package features.elephant;
 
-
-import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.text.DecimalFormat;
 
 public class Calculator implements features.Calculator {
 
@@ -12,8 +12,8 @@ public class Calculator implements features.Calculator {
 			throw new IllegalArgumentException("数式異常:" + formula);
 		}
 		
-		BigDecimal num1 = new BigDecimal(items[0]);
-		BigDecimal num2 = new BigDecimal(items[2]);
+		BigInteger num1 = new BigInteger(items[0]);
+		BigInteger num2 = new BigInteger(items[2]);
 		
 		if(num1.intValue() == 0){
 			throw new IllegalArgumentException("数式異常:左辺ゼロ");
@@ -28,7 +28,8 @@ public class Calculator implements features.Calculator {
 		}else if(items[1].equals("*")){
 			return num1.multiply(num2).toString();
 		}else if(items[1].equals("/")){
-			return num1.divide(num2, 0, BigDecimal.ROUND_HALF_UP).toString();
+			DecimalFormat fmt = new DecimalFormat("0.###");
+			return fmt.format((num1.doubleValue() / num2.doubleValue()));
 		}else{
 			throw new IllegalArgumentException(formula);
 		}
