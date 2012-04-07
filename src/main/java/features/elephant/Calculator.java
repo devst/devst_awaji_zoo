@@ -1,7 +1,7 @@
 package features.elephant;
 
 
-import java.math.BigInteger;
+import java.math.BigDecimal;
 
 public class Calculator implements features.Calculator {
 
@@ -9,10 +9,18 @@ public class Calculator implements features.Calculator {
 	public String execute(String formula) {
 		String[] items = parseFormula(formula);
 		if(items == null || items.length != 3){
-			throw new IllegalArgumentException();
+			throw new IllegalArgumentException("数式異常:" + formula);
 		}
-		BigInteger num1 = new BigInteger(items[0]);
-		BigInteger num2 = new BigInteger(items[2]);
+		
+		BigDecimal num1 = new BigDecimal(items[0]);
+		BigDecimal num2 = new BigDecimal(items[2]);
+		
+		if(num1.intValue() == 0){
+			throw new IllegalArgumentException("数式異常:左辺ゼロ");
+		}else if(num2.intValue() == 0){
+			throw new IllegalArgumentException("数式異常:右辺ゼロ");
+		}
+		
 		if(items[1].equals("+")){
 			return num1.add(num2).toString();
 		}else if(items[1].equals("-")){
@@ -20,7 +28,7 @@ public class Calculator implements features.Calculator {
 		}else if(items[1].equals("*")){
 			return num1.multiply(num2).toString();
 		}else if(items[1].equals("/")){
-			return num1.divide(num2).toString();
+			return num1.divide(num2, 0, BigDecimal.ROUND_HALF_UP).toString();
 		}else{
 			throw new IllegalArgumentException(formula);
 		}
@@ -48,10 +56,10 @@ public class Calculator implements features.Calculator {
 				if(operator == null){
 					operator = String.valueOf(c);
 				}else{
-					throw new IllegalArgumentException(formula);				
+					return null;
 				}
 			}else{
-				throw new IllegalArgumentException(formula);
+				return null;
 			}
 		}
 		return new String[]{num1.toString(), operator, num2.toString()};

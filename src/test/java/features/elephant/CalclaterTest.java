@@ -21,6 +21,8 @@ public class CalclaterTest {
 	@Test
 	public void 割り算(){
 		assertEquals("4", tester.execute("12/3"));
+		assertEquals("1", tester.execute("1/2"));
+		assertEquals("5", tester.execute("14/3"));
 	}
 	
 	@Test
@@ -37,6 +39,19 @@ public class CalclaterTest {
 	public void 書式異常１(){
 		tester.execute("35");
 	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void 書式異常左辺ゼロ(){
+		tester.execute("0+2");
+	}
+
+	@Test(expected = IllegalArgumentException.class)
+	public void 書式異常右辺ゼロ(){
+		tester.execute("3+0");
+	}
+
+	// 除算切り捨て切り上げ
+	// いずれかゼロ
 
 
 	
