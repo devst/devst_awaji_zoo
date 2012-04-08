@@ -5,11 +5,11 @@ public class FizzBuzz implements features.FizzBuzz {
 	@Override
 	public String fizzBuzz(int arg0) {
 		if(arg0 < 1){
-			return new Integer(arg0).toString();
+				throw new RuntimeException();
 		}
-		if(arg0 % 3 == 0 && arg0 % 5 == 0){
+		if(arg0 % 15 == 0){
 			return "FizzBuzz";
-		}		
+		}
 		if(arg0 % 3 == 0){
 			return "Fizz";
 		}

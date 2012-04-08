@@ -12,24 +12,18 @@ public class FizzBuzzTest {
 		assertEquals("Fizz", fb.fizzBuzz(3));
 	}
 	@Test
-	public void FizzNegative() {
-		FizzBuzz fb = new FizzBuzz();
-		assertEquals("-1", fb.fizzBuzz(-1));
-	}
-	@Test
 	public void Buzz() {
 		FizzBuzz fb = new FizzBuzz();
 		assertEquals("Buzz", fb.fizzBuzz(5));
 	}
-	@Test
-	public void BuzzNegative() {
+	@Test(expected=RuntimeException.class)
+	public void FizzNegative() {
 		FizzBuzz fb = new FizzBuzz();
-		assertEquals("-5", fb.fizzBuzz(-5));
+		fb.fizzBuzz(-1);
 	}
 	@Test
 	public void FizzBuzz() {
 		FizzBuzz fb = new FizzBuzz();
 		assertEquals("FizzBuzz", fb.fizzBuzz(15));
 	}
-	
 }
