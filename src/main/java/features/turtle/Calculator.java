@@ -3,10 +3,11 @@ package features.turtle;
 import java.math.BigDecimal;
 
 public class Calculator implements features.Calculator{
-	public Object calculator(String fomula) {
+	@Override
+	public String execute(String fomula) {
 		// TODO 自動生成されたメソッド・スタブ
 		//String fomula = "1+3";
-		System.out.println(getOperator(fomula));
+		//System.out.println(getOperator(fomula));
 		String strToken = getOperator(fomula);
 		String[] strAry = fomula.split(strToken);
 		//String[] strAry = fomula.split("\\+");
@@ -15,7 +16,7 @@ public class Calculator implements features.Calculator{
 		int secondValue = Integer.valueOf(strAry[1]).intValue();
 
 		BigDecimal result = calOperator(strToken,firstValue, secondValue);
-		System.out.println(result);
+		//System.out.println(result);
 		return result.toString();
 	}
 
@@ -55,11 +56,5 @@ public class Calculator implements features.Calculator{
 				return num1.divide(num2,3,BigDecimal.ROUND_HALF_UP);
 			}
 		}
-	}
-
-	@Override
-	public String execute(String arg0) {
-		// TODO 自動生成されたメソッド・スタブ
-		return null;
 	}
 }
