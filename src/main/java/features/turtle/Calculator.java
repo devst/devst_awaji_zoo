@@ -52,6 +52,10 @@ public class Calculator implements features.Calculator{
 		}else{
 			if((arg_num1 % arg_num2) == 0){
 				return num1.divide(num2);
+			}else if((arg_num1 * 10 % arg_num2) == 0){
+				return num1.divide(num2,1,BigDecimal.ROUND_HALF_UP);
+			}else if((arg_num1 * 100 % arg_num2) == 0){
+				return num1.divide(num2,2,BigDecimal.ROUND_HALF_UP);
 			}else{
 				return num1.divide(num2,3,BigDecimal.ROUND_HALF_UP);
 			}

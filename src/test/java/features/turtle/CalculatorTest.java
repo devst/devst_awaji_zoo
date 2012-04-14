@@ -34,11 +34,16 @@ public class CalculatorTest {
 	@Test
 	public void calDev2() {
 		Calculator fb = new Calculator();
-		assertEquals("2.500", fb.execute("10/4"));
+		assertEquals("2.5", fb.execute("10/4"));
 	}
 	@Test
 	public void calDev3() {
 		Calculator fb = new Calculator();
 		assertEquals("0.167", fb.execute("1/6"));
+	}
+	@Test
+	public void calDev4() {
+		Calculator fb = new Calculator();
+		assertEquals("0.25", fb.execute("1/4"));
 	}
 }
